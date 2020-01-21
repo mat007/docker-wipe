@@ -6,5 +6,5 @@ This needs to run with administrator privileges.
 
 Typical usage:
 ```
-docker-wipe.exe C:\ProgramDate\Docker
+docker-wipe.exe C:\ProgramData\Docker
 ```
