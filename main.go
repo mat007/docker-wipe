@@ -39,10 +39,14 @@ func wipe(dir string) error {
 }
 
 func remove(properties []hcsshim.ContainerProperties, dir string) error {
-	fmt.Println("Checking", dir)
 	layers, err := ioutil.ReadDir(dir)
 	if os.IsNotExist(err) {
+		fmt.Println("Skipping", dir, "(not found)")
 		return nil
+	}
+	fmt.Println("Checking", dir)
+	if err != nil {
+		return err
 	}
 	for _, layer := range layers {
 		path := filepath.Join(dir, layer.Name())
@@ -55,9 +59,8 @@ func remove(properties []hcsshim.ContainerProperties, dir string) error {
 			if err != nil {
 				return err
 			}
-			if err := container.Terminate(); err != nil {
-				//return err
-			}
+			// Ignoring error as it can be asynchronous behind the scene.
+			_ = container.Terminate()
 			if err := container.Close(); err != nil {
 				return err
 			}
