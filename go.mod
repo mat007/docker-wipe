@@ -2,15 +2,15 @@ module github.com/mat007/docker-wipe
 
 go 1.17
 
-require github.com/Microsoft/hcsshim v0.8.7
+require github.com/Microsoft/hcsshim v0.9.2
 
 require (
-	github.com/Microsoft/go-winio v0.4.15-0.20190919025122-fc70bd9a86b5 // indirect
-	github.com/containerd/cgroups v0.0.0-20190919134610-bf292b21730f // indirect
-	github.com/gogo/protobuf v1.2.1 // indirect
-	github.com/hashicorp/golang-lru v0.5.1 // indirect
-	github.com/konsorten/go-windows-terminal-sequences v1.0.1 // indirect
-	github.com/sirupsen/logrus v1.4.1 // indirect
-	go.opencensus.io v0.22.0 // indirect
-	golang.org/x/sys v0.0.0-20190916202348-b4ddaad3f8a3 // indirect
+	github.com/Microsoft/go-winio v0.5.2 // indirect
+	github.com/containerd/cgroups v1.0.3 // indirect
+	github.com/gogo/protobuf v1.3.2 // indirect
+	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/sirupsen/logrus v1.8.1 // indirect
+	go.opencensus.io v0.23.0 // indirect
+	golang.org/x/sys v0.0.0-20220330033206-e17cdc41300f // indirect
 )
